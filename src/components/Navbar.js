@@ -9,25 +9,25 @@ const Navbar = () => {
       id: 1,
       name: 'Home',
       icon: 'home',
-      route:'/'
+      route: '/'
     },
     {
       id: 2,
       name: 'About',
       icon: 'person',
-      route:'/about'
+      route: '/about'
     },
     {
       id: 3,
       name: 'Projects',
       icon: 'work',
-      route:'/projects'
+      route: '/projects'
     },
     {
       id: 4,
       name: 'Contact',
       icon: 'mail',
-      route:'/contact'
+      route: '/contact'
     }
   ]
   return (
@@ -43,27 +43,37 @@ const Navbar = () => {
         <div className=' h-14  p-2  w-full'>
           <img className='rounded-full' src="https://avatars.githubusercontent.com/u/104918582?s=400&u=69829e4089cdc26774e0154b400d60c6871f2a73&v=4" alt="" />
         </div>
+
+        <div className='flex justify-center items-center mt-8'  >
+          <button>
+            <span class="material-symbols-rounded">
+              menu
+            </span>
+          </button>
+        </div>
+
         <div className=' h-fit justify-center' >
 
           <ul className='  jusify-center py-16'>
-            {info.map((item) => 
-            <li key={item.id} className='my-6 flex flex-col items-center '> <span  class=" material-symbols-rounded">
+            {info.map((item) =>
+              <li key={item.id} className='my-6 flex flex-col items-center '> <span class=" material-symbols-rounded">
                 {item.icon}
-            {/* <Link to={item.route}>
+                {/* <Link to={item.route}>
             {item.icon}
               </Link> */}
-              
-            </span> {item.name} </li>)}
+
+              </span> {item.name} </li>)}
           </ul>
         </div>
 
-      </div>
 
 
-      <div className=' p-4 flex items-center justify-center'>
-        <button className=' flex items-center justify-center'><span class="material-symbols-rounded">
-          dark_mode
-        </span></button>
+
+        <div className=' p-4 flex items-center justify-center'>
+          <button className=' flex items-center justify-center'><span class="material-symbols-rounded">
+            dark_mode
+          </span></button>
+        </div>
       </div>
     </nav>
   )
