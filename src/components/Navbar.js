@@ -1,7 +1,9 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
+
 
 
   let info = [
@@ -30,11 +32,10 @@ const Navbar = () => {
       route: '/contact'
     }
   ]
+
   return (
-    <nav className="fixed left-0 top-0 h-full  flex justify-between flex-col w-16 bg-gray-800 text-white">
-      <div className=' '>
-
-
+    <nav className="fixed left-0 top-0 h-full    flex-col w-20 bg-gray-800 text-white">
+      <div className='  h-full flex  flex-col items-center justify-around'>
 
 
 
@@ -43,12 +44,12 @@ const Navbar = () => {
         <div className=' h-14  p-2  w-full'>
           <img className='rounded-full' src="https://avatars.githubusercontent.com/u/104918582?s=400&u=69829e4089cdc26774e0154b400d60c6871f2a73&v=4" alt="" />
         </div>
+        <div>
 
-        
-
+        </div>
         <div className=' h-fit justify-between  ' >
 
-          <ul className='  justify-between font-openSans    text-xs py-12'>
+          <ul className='flex  flex-col font-openSans     text-xs py-12'>
             {info.map((item) =>
               <li key={item.id} className='my-6 flex flex-col items-center '> <span className=" material-symbols-rounded">
                 {/* <Link to={item.route}>
