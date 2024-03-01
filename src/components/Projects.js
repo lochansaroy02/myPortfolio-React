@@ -1,82 +1,43 @@
-import React from 'react'
-
+import React, { useState } from 'react'
+// import { Link } from "react-router-dom";
+import { project } from '../utils/Data/ProjectData';
 const Projects = () => {
-  const project = [
-    {
-      name: 'project 1',
-      description: 'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-      link: 'https://www.google.com',
-      image: 'https://avatars.githubusercontent.com/u/104918582?s=400&u=69829e4089cdc26774e0154b400d60c6871f2a73&v=4'
-    },
-    {
-      name: 'project 1',
-      description: 'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-      link: 'https://www.google.com',
-      image: 'https://avatars.githubusercontent.com/u/104918582?s=400&u=69829e4089cdc26774e0154b400d60c6871f2a73&v=4'
-    },
-    {
-      name: 'project 1',
-      description: 'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-      link: 'https://www.google.com',
-      image: 'https://avatars.githubusercontent.com/u/104918582?s=400&u=69829e4089cdc26774e0154b400d60c6871f2a73&v=4'
-    },
-    {
-      name: 'project 1',
-      description: 'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-      link: 'https://www.google.com',
-      image: 'https://avatars.githubusercontent.com/u/104918582?s=400&u=69829e4089cdc26774e0154b400d60c6871f2a73&v=4'
-    },
-    {
-      name: 'project 1',
-      description: 'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-      link: 'https://www.google.com',
-      image: 'https://avatars.githubusercontent.com/u/104918582?s=400&u=69829e4089cdc26774e0154b400d60c6871f2a73&v=4'
-    },
-    {
-      name: 'project 1',
-      description: 'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-      link: 'https://www.google.com',
-      image: 'https://avatars.githubusercontent.com/u/104918582?s=400&u=69829e4089cdc26774e0154b400d60c6871f2a73&v=4'
-    },
-    {
-      name: 'project 1',
-      description: 'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-      link: 'https://www.google.com',
-      image: 'https://avatars.githubusercontent.com/u/104918582?s=400&u=69829e4089cdc26774e0154b400d60c6871f2a73&v=4'
-    },
-    {
-      name: 'project 1',
-      description: 'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-      link: 'https://www.google.com',
-      image: 'https://avatars.githubusercontent.com/u/104918582?s=400&u=69829e4089cdc26774e0154b400d60c6871f2a73&v=4'
-    }
-  ]
+
+
   return (
-    <div className='ml-16'>
-      <div>
-        <h1>Projects</h1>
+    <div className='ml-16 bg-neutral-800 text-white'>
+      <div className=' p-8'>
+        <h1 className='text-4xl font-bold uppercase '>Projects</h1>
         <div className='  p-8'>
-          <div className='w-full flex '>
+          <div className='w-full grid grid-cols-3'>
             {
               project.map((item) => (
-                <div className='flex'>
-                <div  key={item.id}>
-                  <img src={item.image} alt="" />
-                  <div>
-                    <h1>{item.name}</h1>
-                    <p>{item.description}</p>
-                    <span>
-                      <button>Your Button Text</button>
+                <div className='bg-neutral-900 m-2 rounded-lg '>
+                  <div className=' pb-4 object-cover  rounded-lg' key={item.id}>
+                    <img className='rounded-t-lg ' src={item.image} alt="" />
+                  </div>
+                  <div className='p-4'>
+                    <h1 className='text-2xl bold  py-2'>{item.name}</h1>
+                    <p className=' text-wrap'>{item.description}</p>
+                    <span className="flex items-center justify-center ">
+                      <button className='bg-blue-500 m-4  rounded-lg p-2 ' onClick={() => {
+                        window.open(item.link, "_blank");
+                      }} > Link</button>
+                      <button className='bg-blue-500 m-4  rounded-lg p-2 ' onClick={
+                        () => {
+
+                          window.open(item.live, "_blank");
+                        }
+                      }>Live</button>
                     </span>
                   </div>
-                </div>
                 </div>
               ))
             }
 
 
 
-            
+
           </div>
         </div>
       </div>

@@ -44,24 +44,18 @@ const Navbar = () => {
           <img className='rounded-full' src="https://avatars.githubusercontent.com/u/104918582?s=400&u=69829e4089cdc26774e0154b400d60c6871f2a73&v=4" alt="" />
         </div>
 
-        <div className='flex justify-center items-center mt-8'  >
-          <button>
-            <span class="material-symbols-rounded">
-              menu
-            </span>
-          </button>
-        </div>
+        
 
-        <div className=' h-fit justify-center' >
+        <div className=' h-fit justify-between  ' >
 
-          <ul className='  jusify-center py-16'>
+          <ul className='  justify-between font-openSans    text-xs py-12'>
             {info.map((item) =>
-              <li key={item.id} className='my-6 flex flex-col items-center '> <span class=" material-symbols-rounded">
-                {item.icon}
+              <li key={item.id} className='my-6 flex flex-col items-center '> <span className=" material-symbols-rounded">
                 {/* <Link to={item.route}>
             {item.icon}
               </Link> */}
 
+                {item.icon}
               </span> {item.name} </li>)}
           </ul>
         </div>
@@ -70,7 +64,7 @@ const Navbar = () => {
 
 
         <div className=' p-4 flex items-center justify-center'>
-          <button className=' flex items-center justify-center'><span class="material-symbols-rounded">
+          <button className=' flex items-center justify-center'><span className="material-symbols-rounded">
             dark_mode
           </span></button>
         </div>
