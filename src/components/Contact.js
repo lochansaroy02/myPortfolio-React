@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FaJava } from "react-icons/fa";
 
 const Contact = () => {
@@ -19,98 +19,76 @@ const Contact = () => {
       title: 'chat to us',
       desc: 'info@domainname.com'
     },
-    {
-      icon: <FaJava />,
-      title: 'chat to us',
-      desc: 'info@domainname.com'
-    },
-    {
-      icon: <FaJava />,
-      title: 'chat to us',
-      desc: 'info@domainname.com'
-    },
-    {
-      icon: <FaJava />,
-      title: 'chat to us',
-      desc: 'info@domainname.com'
-    },
-
+  
   ]
 
+  const [value, setvalue] = useState("");
 
   return (
-    <div className='ml-16 flex bg-neutral-800 h-screen overflow-x-hidden  w-screen p-8 '>
+    <div className=' flex bg-neutral-800 h-screen overflow-x-hidden  w-screen p-8 '>
 
 
-      <div className=' w-[50%] bg-neutral-800 text-white '>
+      <div className='w-[50%] bg-neutrared-800 text-white'>
 
-        <div className='flex p-4 bg-neutral-700  mt-0 items-center '>
-          <div className=' '>
-            <FaJava className='h-20 w-20' />
+        {info.map((item, index) => (
+          <div key={index} className='flex p-4  mt-0'>
+            <div className='bg-blue-400 p-4  rounded-full text-4xl '>
+              {item.icon}
+            </div>
+            <div className=' ml-4'>
+              <h1 className='text-2xl '>{item.title}</h1>
+              <h3 className='text-xl text-gray-300'>{item.desc}</h3>
+            </div>
           </div>
-          <div>
-            <h1>chat to us  </h1>
-            <h3>
-
-            </h3>
-          </div>
-
-        </div>
-
-        <div className='flex p-4 bg-neutral-700 mt-4 items-center'>
-          <div className=''>
-            <FaJava className='h-20 w-20' />
-          </div>
-          <div>
-            <h1>Visit us </h1>
-            <h3>Warnwe Park Streetperrine,<br />
-              FL 33157 New York City
-
-            </h3>
-          </div>
-
-        </div>
-
-
-
-
-
-
+        ))}
 
       </div>
+
+
+
+
+
       <div className=' w-[40%] p-8 border ml-8 border-white bg-neutral-900  rounded-xl'>
-      
+        <h1 className='text-white text-4xl  p-8  pt-0'> Got Ideas? We've got the skills. Let's team up.</h1>
 
 
 
-        <form className="max-w-md mx-auto ">
-         
-         
-        
-          <div className="grid md:grid-cols-2 md:gap-6">
-            <div className="relative z-0 w-full mb-5 group">
-              <input type="text" name="floating_first_name" id="floating_first_name" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-              <label for="floating_first_name" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">First name</label>
+
+
+
+        <form id="contact-form" className='text-white  '>
+
+
+          <div className="flex justify-between p-4 ">
+            <div className="flex flex-col w-1/2 mr-2  ">
+              <label className="mb-2">First name</label>
+              <input name="name" id="name" type="text" placeholder="Name *" className="  p-2  bg-neutral-900 border  border-gray-400  rounded-lg h-10" value="" />
             </div>
-            <div className="relative z-0 w-full mb-5 group">
-              <input type="text" name="floating_last_name" id="floating_last_name" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-              <label for="floating_last_name" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Last name</label>
+
+            <div className="flex flex-col w-1/2 ml-2">
+              <label className="mb-2">Your Email</label>
+              <input className='  p-2  bg-neutral-900 border border-gray-400 rounded-lg h-10' placeholder='email * ' value={value} onChange={e => setvalue(e.target.value)} />
             </div>
           </div>
-          <div className="relative z-0 w-full mb-5 group">
-            <input type="email" name="floating_email" id="floating_email" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-            <label for="floating_email" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email address</label>
+
+
+          <div className="flex flex-col p-4 ">
+
+            <label className="mb-2">Subject</label>
+            <input name="subject" id="subject" type="text" placeholder="Subject *" className=" p-2  bg-neutral-900 border border-gray-400 rounded-lg h-10" value="" />
+
           </div>
-          <div className="grid md:grid-cols-2 md:gap-6">
-            <div className="relative z-0 w-full mb-5 group">
-              <input type="tel" pattern="" name="floating_phone" id="floating_phone" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-              <label for="floating_phone" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Phone number (123-456-7890)</label>
-            </div>
-            
+          <div className="flex flex-col p-4">
+
+            <label className="mb-2">Your message</label>
+            <textarea name="msg" id="message" placeholder="Message" className=" p-2   bg-neutral-900 border border-gray-400 rounded-lg "></textarea>
+
           </div>
-          <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+          <div className=" flex justify-center p-4 ">
+
+            <button className=" bg-blue-300 p-4 rounded-lg " type="submit" id="send_message" value="">Send Message</button>
+          </div>
         </form>
-
       </div>
     </div>
   )
