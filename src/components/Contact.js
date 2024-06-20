@@ -1,38 +1,37 @@
 import React, { useState } from 'react'
-import { FaJava } from "react-icons/fa";
+import { MdLocalPhone,MdEmail } from "react-icons/md";
+import Curve from './tools/Curve';
 
 const Contact = () => {
 
   let info = [
     {
-      icon: <FaJava />,
-      title: 'chat to us',
-      desc: 'info@domainname.com'
+      icon: <MdLocalPhone />,
+      title: 'Contact me',
+      desc: '+917017308109'
     },
     {
-      icon: <FaJava />,
-      title: 'chat to us',
-      desc: 'info@domainname.com'
-    },
-    {
-      icon: <FaJava />,
-      title: 'chat to us',
-      desc: 'info@domainname.com'
-    },
-  
+      icon: <MdEmail />,
+      title: 'Email me ',
+      desc: 'lochansaroy47@gmail.com'
+    }
+
   ]
 
   const [value, setvalue] = useState("");
 
   return (
-    <div className=' flex bg-neutral-800 h-screen overflow-x-hidden  w-screen p-8 '>
+<>
 
 
-      <div className='w-[50%] bg-neutrared-800 text-white'>
+      <Curve/>
+    <div className=' flex bg-neutral-900  overflow-x-hidden  mb-12  w-screen p-8 '>
+
+      <div className='w-[50%] bg-neutrared-800 text-white flex flex-col '>
 
         {info.map((item, index) => (
-          <div key={index} className='flex p-4  mt-0'>
-            <div className='bg-blue-400 p-4  rounded-full text-4xl '>
+          <div key={index} className='flex p-4 mb-4  mt-0'>
+            <div className='bg-neutral-400 p-4  rounded-full text-4xl '>
               {item.icon}
             </div>
             <div className=' ml-4'>
@@ -42,21 +41,27 @@ const Contact = () => {
           </div>
         ))}
 
+        <div className=' w-fit p-4 ml-4 mt-16 rounded-lg bg-neutral-300 flex justify-center align-center '>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18999.530312596475!2d88.42263745907721!3d22.446320175813295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0272166e4cb263%3A0x27f12170efd9ddee!2sFuture%20Institute%20of%20Engineering%20and%20Management!5e1!3m2!1sen!2sin!4v1718849162937!5m2!1sen!2sin" width="350" height="200" style={{ border: 1 }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
       </div>
 
 
 
 
 
-      <div className=' w-[40%] p-8 border ml-8 border-white bg-neutral-900  rounded-xl'>
-        <h1 className='text-white text-4xl  p-8  pt-0'> Got Ideas? We've got the skills. Let's team up.</h1>
+
+
+      <div className=' w-[40%] h-fit  border  border-white bg-neutral-900   rounded-xl'>
+        <h1 className='text-white text-2xl  px-8 py-2'> Got Ideas? We've got the skills. Let's team up.</h1>
 
 
 
 
 
 
-        <form id="contact-form" className='text-white  '>
+        <form id="contact-form" className='text-white p-4  '>
 
 
           <div className="flex justify-between p-4 ">
@@ -91,6 +96,7 @@ const Contact = () => {
         </form>
       </div>
     </div>
+    </>
   )
 }
 

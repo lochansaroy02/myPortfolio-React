@@ -1,36 +1,14 @@
 import React from 'react'
-import Navbar from './Navbar';
 import About from './About';
 import Home from './Home';
 import Projects from './Projects';
-import { Outlet, createBrowserRouter } from 'react-router-dom';
 import Contact from './Contact';
+import { useSelector, useDispatch } from 'react-redux'
+import { changeTheme } from '../utils/themeSlice';
+
 
 const Body = () => {
 
-    const routedData = createBrowserRouter([
-        {
-            path: "/",
-            element: <Home />,
-            children: [
-                {
-                    path: '/about',
-                    element: <About />
-                },
-                {
-                    path: '/projects',
-                    element: <Projects/> 
-
-                },
-                {
-                    path: '/contact',
-                    element: <Contact/> 
-
-                }
-
-            ]
-        }
-    ])
     return (
 
 

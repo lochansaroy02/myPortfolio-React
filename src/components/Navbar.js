@@ -1,6 +1,11 @@
 import React from 'react'
-import { Link } from "react-router-dom";
-import { useNavigate } from 'react-router-dom';
+import { MdOutlineLightMode,MdDarkMode } from "react-icons/md";
+import { useDispatch, useSelector } from 'react-redux';
+import { changeTheme } from '../utils/themeSlice';
+
+
+
+
 
 const Navbar = () => {
 
@@ -33,8 +38,20 @@ const Navbar = () => {
     }
   ]
 
+  const [dark, setDark] = React.useState(false);
+const dispatch = useDispatch();
+
+    const darkModeHandler = () => {
+        setDark(!dark);
+        document.body.classList.toggle("dark");
+        dispatch(changeTheme(dark))
+    }
+
+    const check = useSelector((state) => state.theme.themeState)
+
+
   return (
-    <nav className="fixed left-0 top-0 h-full    flex-col w-20 bg-gray-800 text-white">
+    <nav className="fixed left-0 top-0 h-full   text-neutral-900 bg-neutral-300   flex-col w-20 dark:bg-neutral-800 dark:text-white">
       <div className='  h-full flex  flex-col items-center justify-around'>
 
 
@@ -65,10 +82,20 @@ const Navbar = () => {
 
 
         <div className=' p-4 flex items-center justify-center'>
-          <button className=' flex items-center justify-center'><span className="material-symbols-rounded">
+          {/* <button className=' flex items-center justify-center'><span className="material-symbols-rounded">
             dark_mode
-          </span></button>
+          </span></button> */}
+          <button onClick={()=> darkModeHandler()}>
+      {
+          
+          dark && <MdOutlineLightMode  className='h-8 w-8'/>// render sunny when dark is true
+      }
+      {
+          !dark && <MdDarkMode className=' h-8 w-8 '/> // render moon when dark is false
+      }
+ </button>
         </div>
+
       </div>
     </nav>
   )
