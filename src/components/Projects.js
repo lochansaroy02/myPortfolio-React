@@ -6,15 +6,15 @@ const Projects = () => {
 
 
   return (
-    <div className='  text-white'>
+    <div className=' bg-neutral-200 text-white dark:bg-neutral-800'>
       <Curve />
       <div className=' p-8'>
-        <h1 className='text-4xl font-bold uppercase '>Projects</h1>
+        <h1 className='text-6xl text-neutral-900 dark:text-neutral-100 '>Projects</h1>
         <div className='  p-8'>
           <div className='w-full   grid grid-cols-2'>
             {
               project.map((item) => (
-                <div className='bg-neutral-900 h-fit  border border-white m-2 rounded-lg '>
+                <div className='dark:bg-neutral-900 bg-neutral-200 h-fit  border border-zinc-500 dark:border-white m-2 rounded-lg '>
                   <div className=' p-4 hover:scale-105 relative transition duration-500 cursor-pointer  object-cover  rounded-lg' key={item.id}>
                     <img className='rounded-t-lg ' src={item.image} alt="" />
                     <div className='  absolute  flex flex-col h-[50%]  bottom-1 my-4 mx-8 inset-x-0 rounded-lg px-4 bg-slate-900    opacity-0 hover:opacity-100 transition duration-400 cursor-pointer 

@@ -22,10 +22,10 @@ const Home = () => {
 
     let image = 'https://avatars.githubusercontent.com/u/104918582?s=400&u=69829e4089cdc26774e0154b400d60c6871f2a73&v=4'
     return (
-        <div className=' flex justify-center items-center  w-screen h-screen p-4  bg-neutral-200 dark:bg-neutral-900' >
+        <div className=' flex justify-center items-center  w-screen h-screen p-4 mb-0  bg-neutral-300 dark:bg-neutral-900' >
             <div className='flex w-[90%]  p-8  h-fit  flex-row-reverse  rounded-2xl text-white'>
-                <div className=' border-w h-full  flex justify-center  w-fit rounded-xl mr-2'>
-                    <img className='h-[80%] w-[80%] bg-blue-400 rounded-3xl ' src={img} alt="" />
+                <div className=' border-w h-full   flex justify-center  w-fit rounded-xl mr-2'>
+                    <img className='h-[80%] w-[80%]  bg-blue-600 dark:bg-blue-400 rounded-3xl ' src={img} alt="" />
                 </div>
 
 

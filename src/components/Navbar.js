@@ -51,7 +51,7 @@ const dispatch = useDispatch();
 
 
   return (
-    <nav className="fixed left-0 top-0 h-full   text-neutral-900 bg-neutral-300   flex-col w-20 dark:bg-neutral-800 dark:text-white">
+    <nav className="fixed left-0 top-0 h-full  border-r dark:border-neutral-200 border-neutral-500 text-neutral-900 bg-neutral-400   flex-col w-20 dark:bg-neutral-800 dark:text-white">
       <div className='  h-full flex  flex-col items-center justify-around'>
 
 

@@ -83,12 +83,13 @@ const Person = () => {
 
   ]
   return (
+<>
+
     <div className=' w-screen h-fit   items-center  '>
-     <Curve/>
     
     
     
-      <div className='  rounded-lg  mt-8 text-neutral-100 h-screen   p-8 flex border-gray'>
+      <div className='  dark:text-neutral-100 dark:bg-neutral-800 bg-neutral-200 h-screen   p-8 flex border-gray'>
         <div className='w-1/2   h-2/3 py-4 flex  flex-col justify-between  '>
 
           <div className=' ml-4 p-4'>
@@ -97,12 +98,12 @@ const Person = () => {
               About
             </h1>
 
-            <p className='text-wrap  w-3/4 mt-8'>
-              lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            <p className='text-wrap text-xl mr-8  text-justify mt-8'>
+            Blending creativity with technical expertise in HTML, CSS, JavaScript, React, and Node.js. I develop robust, scalable web applications that captivate users. Your project deserves the best – let’s work together!
             </p>
           </div>
 
-          <div className=' mt-4 w-3/4 flex bg-neutral-800 ml-6 border border-white rounded-2xl p-4 justify-around '>
+          <div className=' mt-4 w-3/4 flex dark:bg-neutral-800 bg-zinc-300  ml-6 border border-neutral-800 dark:border-white rounded-2xl p-4 justify-around '>
             {
               social.map((item) => {
                 return (
@@ -123,14 +124,14 @@ const Person = () => {
 
 
         </div>
-        <div className=' bg-neutral-800 rounded-2xl border h-fit border-white w-[40%] p-4'>
+        <div className=' dark:bg-neutral-800 bg-zinc-300   rounded-2xl border h-fit border-neutral-700 dark:border-white w-[40%] p-4'>
           <h1 className='text-6xl'>
             Skills
           </h1>
           <ul className=' grid grid-cols-3   gap-3 py-8  '>
             {skills.map((skill) => {
               return (
-                <div className='bg-neutral-700 text-white   rounded-lg py-4'>
+                <div className='dark:bg-neutral-700 bg-zinc-200 border-neutral-600 dark:text-white   rounded-xl py-4'>
                   <li className='mx-2 text-md flex flex-col-reverse items-center'>
                     <h1 className='text-xl '>
 
@@ -150,6 +151,7 @@ const Person = () => {
         </div>
       </div>
     </div>
+   </>
   )
 }
 
