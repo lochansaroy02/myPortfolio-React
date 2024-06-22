@@ -51,7 +51,7 @@ const Contact = () => {
 
         </div>
 
-        <div className='mt-8  md:mr-8    h-fit border text-neutral-900 border-neutral-600 dark:border-neutral-100 bg-neutral-300 dark:bg-neutral-900 rounded-xl'>
+        <div className='mt-8  md:mr-20   h-fit border text-neutral-900 border-neutral-600 dark:border-neutral-100 bg-neutral-300 dark:bg-neutral-900 rounded-xl'>
           <h1 className='dark:text-neutral-100 text-neutral-800 text-2xl px-8 py-2'>Got Ideas? We've got the skills. Let's team up.</h1>
 
           <form id="contact-form" className='text-neutral-800 text-md dark:text-neutral-100 p-4'>
