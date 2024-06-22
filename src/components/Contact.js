@@ -1,8 +1,13 @@
 import React, { useState } from 'react'
 import { MdLocalPhone, MdEmail } from "react-icons/md";
-import Curve from './tools/Curve';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
+
+
+
+  const notify = () => toast.success("Message sent!");
 
   let info = [
     {
@@ -20,9 +25,6 @@ const Contact = () => {
 
   const [value, setValue] = useState("");
 
-  const sendMessege = () => {
-    // alert("button clicked");
-  }
 
   return (
     <>
@@ -72,7 +74,8 @@ const Contact = () => {
               <textarea name="msg" id="message" placeholder="Message" className="p-2 dark:bg-neutral-900 border border-neutral-600 dark:border-neutral-400 rounded-lg"></textarea>
             </div>
             <div className="flex justify-center p-4">
-              <button className="bg-blue-600 text-neutral-100 dark:text-neutral-700 dark:bg-blue-300 p-4 rounded-xl font-medium" type="button" id="send_message" value="" onClick={sendMessege}>Send Message</button>
+              <button className="bg-blue-600 text-neutral-100 dark:text-neutral-700 dark:bg-blue-300 p-4 rounded-xl font-medium" type="button" id="send_message" value="" onClick={notify}>Send Message</button>
+              <ToastContainer  />
             </div>
           </form>
         </div>
