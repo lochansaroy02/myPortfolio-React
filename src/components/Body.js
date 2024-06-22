@@ -12,7 +12,7 @@ const Body = () => {
     return (
 
 
-        <div className='ml-20'>
+        <div className='md:ml-20'>
             <Home/> 
             <About/> 
             <Projects/> 
