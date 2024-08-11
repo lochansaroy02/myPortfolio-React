@@ -28,10 +28,6 @@ const Home = () => {
             <div className='flex w-[90%]  md:p-8  h-fit  flex-col  md:flex-row-reverse  rounded-2xl text-white'>
                 <div className=' border-w h-full   flex justify-center items-center  w-fit rounded-full mr-2'>
                     <img className='md:h-[70%] md:w-[70%]   bg-blue-600 dark:bg-blue-400 rounded-full ' src={img} alt="" />
-
-
-
-
                 </div>
 
 

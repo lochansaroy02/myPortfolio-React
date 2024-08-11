@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
-// import { Link } from "react-router-dom";
+import React from 'react'
 import { project } from '../utils/Data/ProjectData';
 import Curve from "./tools/Curve";
+
+
+
 const Projects = () => {
-
-
   return (
     <div className=' w-screen bg-neutral-200 text-white dark:bg-neutral-800'>
       <Curve />
@@ -19,9 +19,8 @@ const Projects = () => {
                     <img className='rounded-t-lg ' src={item.image} alt="" />
                     <div className='  md:absolute  flex flex-col  bottom-1 my-4 md:mx-8 inset-x-0 rounded-lg px-4 md:bg-neutral-400   dark:bg-neutral-800 md:opacity-0 md:hover:opacity-100 transition duration-400 cursor-pointer 
                   '>
-                   
                       <div className=' flex flex-col  pb-4 md:pb-0 '>
-                      <h1 className='text-xl font-medium dark:text-neutral-100 text-neutral-900 bold  py-2'>{item.name}</h1>
+                        <h1 className='text-xl font-medium dark:text-neutral-100 text-neutral-900 bold  py-2'>{item.name}</h1>
                         <p className=' text-wrap text-neutral-800   text-justify dark:text-neutral-100 text-sm '>{item.description}</p>
                         <span className="flex md: justify-center    mt-4 md:pb-4    ">
                           <button className='bg-blue-500 text-md   rounded-lg px-2 ' onClick={() => {

@@ -26,20 +26,20 @@ const Person = () => {
     {
       name: 'Node js',
       icon:
-      <i class="devicon-nodejs-plain-wordmark colored"></i>
-          
+        <i class="devicon-nodejs-plain-wordmark colored"></i>
+
     },
     {
       name: 'mongodb',
       icon:
 
-        
-      <i class="devicon-mongodb-plain colored"></i>
+
+        <i class="devicon-mongodb-plain colored"></i>
     },
     {
       name: 'express',
       icon:
-      <i class="devicon-express-original"></i>
+        <i class="devicon-express-original"></i>
     },
 
     {
@@ -53,7 +53,7 @@ const Person = () => {
 
         <i class="devicon-git-plain colored"></i>
     }
-   
+
   ];
 
   let social = [
